@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog CMS (Content Management System)</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h2>New Post</h2>
+    <form method="POST">
+        <label>Title:<br>
+        <input type="text" name="title" required>
+        </label><br><br>
+
+        <label>Content: <br>
+            <textarea name="content" rows="25" cols="50" required></textarea>
+        </label><br>    
+        <button type="submit">Create new post</button>
+    </form>
+</body>
+</html>

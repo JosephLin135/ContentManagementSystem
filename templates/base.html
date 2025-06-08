@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog CMS (Content Management System)</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{url_for('index')}}"">My Blog</a></h1>
+        <nav><a href="{{url_for('new_post')}}"">New Post</a></nav>
+        <hr />
+    </header>
+</body>
+</html>

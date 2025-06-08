@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog CMS (Content Management System)</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h2>Posts</h2>
+
+    <a href="{{ url_for('new_post') }}">
+        <button>Add New Post</button>
+    </a>
+
+    <ul>
+        {% if posts %}
+            {% for post in posts %}
+        <li>
+            <a href="{{ url_for('show_post', post_id = post.id) }}"> {{post.title }}</a>
+            <small>({{ post.date }})</small>
+        </li>
+        {% endfor %}
+    {% else %}
+        <li>No post yet</li>
+    {% endif %}
+    </ul>
+</body>
+</html>
