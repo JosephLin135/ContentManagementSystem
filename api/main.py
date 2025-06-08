@@ -3,7 +3,7 @@ import json
 import os
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 POSTS_FILE = 'posts.json'
 
 def load_posts():
